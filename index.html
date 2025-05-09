@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/836138ac3a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <div class="background-img">
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt="circle-svg"
+        class="circle-svg"
+      />
+      <img
+        src="./assets/images/pattern-lines.svg"
+        alt="lines-svg"
+        class="lines-svg"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        alt="squiggly-svg"
+        class="bottom-squiggly-svg"
+      />
+
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="squiggly-svg"
+        class="top-squiggly-svg"
+      />
+    </div>
+    <header class="header-text">
+      <img src="./assets/images/logo-full.svg" alt="logo" class="logo" />
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <h2>Secure your spot at next year's biggest coding conference.</h2>
+    </header>
+    <main>
+      <form>
+        <div class="Upload-img-container">
+          <label for="avatar">upload Avatar</label>
+          <div class="wrapper">
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept=".jpg, .png"
+              required
+            />
+            <div class="upload-content">
+              <img src="./assets/images/icon-upload.svg" alt="icon-upload" />
+              <p class="avatar-text">Drag and drop or click to upload</p>
+            </div>
+          </div>
+          <div class="info">
+            <img src="./assets/images/icon-info.svg" alt="icon-info" />
+            <p class="avatar-instructions">
+              upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="github-username">GitHub Username</label>
+          <input
+            type="text"
+            id="github-username"
+            name="github-username"
+            placeholder="@yourusername"
+          />
+        </div>
+        <button type="submit">Generate My Ticket</button>
+      </form>
+    </main>
+
+    <!-- Congratulations start -->
+    <section class="ticket-card">
+      <div class="ticket-header">
+        <div class="ticket-logo">
+          <img src="./assets/images/logo-mark.svg" alt="ticket-logo" />
+        </div>
+        <div class="container">
+          <h3 class="ticket-logo-text">Coding Conf</h3>
+          <div class="date-location">
+            <div class="date">
+              <span class="month">Jan</span>
+              <span class="day">31, </span>
+              <span class="year">2025 / </span>
+            </div>
+            <p>Austin, TX</p>
+          </div>
+        </div>
+      </div>
+      <div class="avatar-detail">
+        <div>
+          <img
+            class="avatar"
+            src="./assets/images/image-avatar.jpg"
+            alt="avatar-img"
+          />
+        </div>
+        <div class="avatar-detail-con">
+          <h4>Boluwatife Aiyenibe</h4>
+          <div>
+            <img src="./assets/images/icon-github.svg" alt="github-icon" />
+            <p>@Boyutife</p>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-number">#01609</div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
