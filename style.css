@@ -76,7 +76,7 @@ header {
   justify-content: center;
   text-align: center;
   color: var(--neutral-0);
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 35%;
   margin-left: auto;
   margin-right: auto;
@@ -354,7 +354,7 @@ section {
 
   body {
     height: auto;
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin: 0;
     background-image: url(./assets/images/background-mobile.png);
     background-size: cover;
@@ -385,7 +385,6 @@ section {
     justify-content: center;
     text-align: center;
     color: var(--neutral-0);
-    margin-top: 2rem;
     margin: 0;
     width: 100%;
   }
@@ -475,7 +474,7 @@ section {
   .bottom-squiggly-svg-mobile {
     display: block;
     position: absolute;
-    bottom: -2rem;
+    bottom: 0;
     width: 70%;
     left: 0;
   }
