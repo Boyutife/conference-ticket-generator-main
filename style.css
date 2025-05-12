@@ -38,6 +38,29 @@ body {
   color: var(--neutral-0);
 }
 
+.hidden {
+  display: none;
+}
+
+.full-name {
+  background-color: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.email {
+  color: var(--orange-500);
+}
+
+.input-error {
+  color: var(--orange-500);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -85,16 +108,54 @@ h2 {
   right: 25%;
 }
 
+.generate-ticket-btn {
+  width: 100%;
+  margin-top: 2rem;
+  z-index: 10;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: large;
+  font-weight: bold;
+  color: var(--neutral-900);
+  background-color: var(--orange-500);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  width: 20%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
+}
+
+#avatar-btns {
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.change-avatar-btn,
+.rmv-avatar-btn {
+  padding: 0.5rem 1rem;
+  color: var(--neutral-0);
+  background-color: var(--neutral-700);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#preview-avatar {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
 }
 
 form input {
@@ -102,9 +163,9 @@ form input {
   margin-bottom: 0.75rem;
   margin-top: 0.5rem;
   border-radius: 1rem;
-  border: 1px solid var(--neutral-500);
-  background-color: var(--neutral-700);
-  opacity: 0.5;
+  border: 1px solid var(--neutral-300);
+  background-color: var(--neutral-900);
+  opacity: 0.75;
   color: var(--neutral-0);
   font-size: 1rem;
 }
@@ -115,16 +176,13 @@ form input {
   width: 100%;
 }
 
-.form-group.upload-image {
-  margin-bottom: 2rem;
-}
 .wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-#avatar {
+#input-avatar {
   position: absolute;
   z-index: 1;
   top: 0.5rem;
@@ -133,37 +191,22 @@ form input {
   opacity: 0;
 }
 
-.info {
+.avatar-card-info {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
-.upload-content {
+.avatar-card {
   z-index: 0;
-  border: 1px dashed var(--neutral-500);
+  border: 3px dashed var(--neutral-700);
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--neutral-700);
-  opacity: 0.5;
+  background-color: transparent;
   margin-top: 1rem;
-}
-
-button {
-  width: 100%;
-  margin-top: 2rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: large;
-  font-weight: bold;
-  color: var(--neutral-900);
-  background-color: var(--orange-500);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 form input::placeholder {
@@ -185,15 +228,13 @@ label {
   color: hsl(228, 45%, 44%);
 }
 
-main {
-  display: none;
-}
+/* Congratulations Section */
 
 section {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 5rem;
+  margin-top: 2rem;
   height: 15rem;
   width: 35rem;
   padding: 2.5rem 1rem;
@@ -237,12 +278,12 @@ section {
   justify-content: center;
 }
 
-.date-location {
+.event-date {
   display: flex;
   align-items: center;
 }
 
-.date-location p {
+.event-date p {
   margin-left: 1rem;
 }
 
@@ -258,6 +299,7 @@ section {
 
 .avatar-detail-con div {
   display: flex;
+  align-items: center;
 }
 
 .avatar-detail-con h4 {
@@ -265,16 +307,21 @@ section {
   font-size: 1.2rem;
 }
 
-.avatar {
+.ticket-avatar {
   height: 5rem;
+  width: 5rem;
   border-radius: 1rem;
   margin-right: 1rem;
 }
 
-/* h2 {
-  font-weight: bolder;
-  font-size: 5rem;
+.ticket-page-name {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+  background-clip: text;
+  font-weight: bold;
+}
+
+.ticket-page-email {
+  color: var(--orange-500);
+}

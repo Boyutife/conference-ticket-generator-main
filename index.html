@@ -52,36 +52,56 @@
       <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
       <h2>Secure your spot at next year's biggest coding conference.</h2>
     </header>
-    <main>
+    <main class="form-wrapper">
       <form>
-        <div class="Upload-img-container">
-          <label for="avatar">upload Avatar</label>
+        <div class="avatar-container">
+          <label for="input-avatar">upload Avatar</label>
           <div class="wrapper">
             <input
               type="file"
-              id="avatar"
+              id="input-avatar"
               name="avatar"
               accept=".jpg, .png"
               required
             />
-            <div class="upload-content">
-              <img src="./assets/images/icon-upload.svg" alt="icon-upload" />
+            <div class="avatar-card">
+              <img
+                id="preview-avatar"
+                src="./assets/images/icon-upload.svg"
+                alt="icon-upload"
+              />
               <p class="avatar-text">Drag and drop or click to upload</p>
+              <div id="avatar-btns" class="hidden">
+                <button
+                  type="button"
+                  class="rmv-avatar-btn"
+                  onclick="removeAvatar()"
+                >
+                  Remove image
+                </button>
+                <button
+                  type="button"
+                  class="change-avatar-btn"
+                  onclick="changeAvatar()"
+                >
+                  Change image
+                </button>
+              </div>
             </div>
           </div>
-          <div class="info">
+          <div class="avatar-card-info">
             <img src="./assets/images/icon-info.svg" alt="icon-info" />
-            <p class="avatar-instructions">
+            <p class="avatar-info">
               upload your photo (JPG or PNG, max size: 500KB).
             </p>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group name-wrapper">
           <label for="full-name">Full Name</label>
           <input type="text" id="full-name" name="full-name" required />
         </div>
-        <div class="form-group">
+        <div class="form-group email-wrapper">
           <label for="email">Email Address</label>
           <input
             type="email"
@@ -91,7 +111,7 @@
             required
           />
         </div>
-        <div class="form-group">
+        <div class="form-group github-wrapper">
           <label for="github-username">GitHub Username</label>
           <input
             type="text"
@@ -100,7 +120,7 @@
             placeholder="@yourusername"
           />
         </div>
-        <button type="submit">Generate My Ticket</button>
+        <button class="generate-ticket-btn">Generate My Ticket</button>
       </form>
     </main>
 
@@ -112,11 +132,11 @@
         </div>
         <div class="container">
           <h3 class="ticket-logo-text">Coding Conf</h3>
-          <div class="date-location">
+          <div class="event-date">
             <div class="date">
-              <span class="month">Jan</span>
-              <span class="day">31, </span>
-              <span class="year">2025 / </span>
+              <span class="event-month">Jan</span>
+              <span class="event-day">31, </span>
+              <span class="event-year">2025 / </span>
             </div>
             <p>Austin, TX</p>
           </div>
@@ -125,16 +145,16 @@
       <div class="avatar-detail">
         <div>
           <img
-            class="avatar"
+            class="ticket-avatar"
             src="./assets/images/image-avatar.jpg"
             alt="avatar-img"
           />
         </div>
         <div class="avatar-detail-con">
-          <h4>Boluwatife Aiyenibe</h4>
+          <h4 class="ticket-card-username"></h4>
           <div>
             <img src="./assets/images/icon-github.svg" alt="github-icon" />
-            <p>@Boyutife</p>
+            <p class="ticket-github-username"></p>
           </div>
         </div>
       </div>
